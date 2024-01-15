@@ -1,0 +1,377 @@
+Section styles
+.section {
+    display: none;
+  }
+ 
+  .section.active {
+    display: block;
+  }
+  .customer-section {
+    margin-top: 10px;
+    margin-left: 54%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 190px;
+    height: 180px;
+    border-top: 3px solid #ffd700;
+    border-bottom: 7px solid #087c46;
+    color: #024f25;  
+  }
+  .customer-section li:hover{
+    color:rgb(91, 129, 53)
+  }
+ 
+ /*
+.viewByID {
+  margin-bottom: 20px;
+  text-align: center;
+}
+ 
+.viewByID label {
+  display: block;
+  margin-bottom: 5px;
+}
+ 
+.viewByID input[type="number"] {
+  width: 200px;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+ 
+.viewByID button {
+  padding: 10px 20px;
+  background-color: #038533b3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: auto;
+}
+ 
+ 
+ 
+ 
+ 
+.Display td {
+  padding: 3px;
+  text-align: center;
+}
+ 
+.Display th {
+  background-color: #f2f2f2;
+}
+ 
+.Display tr:nth-child(even) {
+  background-color: #f2f2f2;
+}*/
+ 
+ 
+.allCustomers {
+  margin-top: 20px;
+ 
+ 
+}
+ 
+.allCustomers button {
+  padding: 10px 20px;
+  background-color: #038533b3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin: auto;
+}
+ 
+.allCustomers button:hover {
+  background-color: #45a049;
+}
+ 
+.allCustomers button:focus {
+  outline: none;
+}
+ 
+.Display table {
+  margin-top: 20px;
+  width: 60%;
+  border-collapse: collapse;
+  margin: auto;
+}
+ 
+.Display th{
+  padding: 8px;
+  text-align: center;
+  background-color: #038533b3;
+  color: rgb(255, 255, 255);
+}
+.Display td {
+  padding: 8px;
+  text-align: center;
+}
+ 
+.Display tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+ 
+ 
+ 
+ 
+ */
+ body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  /* Other general styles for the body */
+}
+ 
+/*.allCustomers {
+  margin-top: 20px;
+}
+ 
+.allCustomers table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+ 
+.allCustomers th,
+.allCustomers td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+ 
+.allCustomers th {
+  background-color: #4caf50;
+  color: white;
+}*/
+ 
+.viewByID {
+  margin-top: 20px;
+}
+ 
+.viewByID table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+ 
+.viewByID th,
+.viewByID td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+ 
+.viewByID th {
+  background-color: #4caf50;
+  color: white;
+}
+ 
+.updateCustomer,
+.deleteCustomer {
+  margin-top: 20px;
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+  border-top: 4px solid #e0e307;
+  border-bottom: 9px solid #02652c;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  background: #eeeeee;
+}
+ 
+.updateCustomer h2,
+.deleteCustomer h1 {
+  text-align: center;
+}
+ 
+.updateCustomer form,
+.deleteCustomer form {
+  text-align: -webkit-center;
+}
+ 
+.updateCustomer label,
+.deleteCustomer label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+ 
+.updateCustomer input,
+.deleteCustomer input {
+  width: 320px;
+  padding: 10px;
+  margin: auto;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+ 
+.updateCustomer button,
+.deleteCustomer button {
+  width: 25%;
+  padding: 13px;
+  margin : 0 auto;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+ 
+.updateCustomer button:hover,
+.deleteCustomer button:hover {
+  background-color: #0056b3;
+}
+ 
+.updateCustomer button:disabled,
+.deleteCustomer button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #ccc;
+  color: #666;
+}
+ 
+.responseMsg {
+  text-align: center;
+  margin-top: 10px;
+  color: #333;
+}
+.viewByID {
+  margin-top: 20px;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  border-top: 4px solid #e0e307;
+  border-bottom: 9px solid #02652c;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  background: #eeeeee;
+  margin-top: 50px;
+}
+ 
+.viewByID h2 {
+  text-align: center;
+}
+ 
+.viewByID form {
+  text-align: center;
+}
+ 
+.viewByID .viewByID-field {
+  margin-bottom: 15px;
+}
+ 
+.viewByID label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+ 
+.viewByID input {
+  width: 320px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+ 
+.viewByID button {
+  width: 40;
+  padding: 13px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+ 
+.viewByID button:hover {
+  background-color: #0056b3;
+}
+ 
+.viewByID button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #ccc;
+  color: #666;
+}
+.pagination {
+  width: auto;
+  padding: 5px;
+  margin: 4px;
+  border: none;
+  border-radius: 2px;
+  background-color: #07ba4b;
+  color: white;
+  cursor: pointer;
+}
+ 
+.pagination:hover{
+  background-color: #017105;
+}
+ 
+.order-form table {
+  margin: auto;
+  width: 60%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+ 
+}
+ 
+.order-form th, .order-form td {
+  border: 1px solid #038927e3;;
+  padding: 5px;
+  text-align: center;
+ 
+}
+ 
+.order-form th {
+  background-color: #038927e3;
+  color: #fff;
+}
+.order-form tr:nth-child(even) {
+  background-color:  #f0f0f0;
+}
+ 
+.order-form {
+  max-width: 100%;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  border-top: 4px solid #e0e307;
+  border-bottom: 9px solid #038927e3;
+  text-align: center;
+  border-top: 4px solid #e0e307;
+  border-bottom: 9px solid #038927e3;
+  margin-top: 50px;
+}
+.add{
+  width: 100px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #07ba4b;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+    top: 260px;
+    left: 80px;
+ }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <header>
+    <nav>
+        <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSklgAhuarMIMW2HkymEtpr0UwDSmjRaW1onQ&usqp=CAU" alt="Logo" class="logo-icon">
+            The Green Bay
+          </div>
+        <!-- Rest of the navigation links -->
+      </nav>
+  </header>
+<section class="hero" *ngIf="showSection">
+    <div class="video-background">
+      <iframe src="https://player.vimeo.com/video/523222052?background=1&autoplay=1&loop=1&byline=0&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+    <div class="hero-content">
+      <h1 style="font-size: 30px;">Welcome to "The Green Bay" an Online Plant Nursery</h1><br>
+      <p>Step into a verdant realm where every leaf tells a story. At The Green Bay, our nursery isn't just about plants; it's a canvas of life, a sanctuary of serenity. From vibrant succulents to majestic ferns, we curate nature's finest for your haven. Come, explore our garden, and let nature's symphony grace your home.</p>
+      <br><br>
+      <button class="shop-now-btn" (click)="naviagateToLogin()">Get Started!</button>
+    </div>
+  </section><section *ngIf="showNext">
+  <router-outlet></router-outlet></section> 
+  <footer>
+    <p>The Green Bay - Online Plant Nursery</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,261 @@
+
+
+.welcome-message {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+  font-style: italic;
+}
+ 
+.welcome-message h2 {
+  font-size: 27px;
+  font-style: normal;
+}
+ 
+.signup-form {
+  max-width: 390px;
+  margin: auto;
+  padding: 20px;
+  border-top: 4px solid #e0e307;
+  border-bottom: 9px solid #02652c;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  background: #eeeeee;
+}
+ 
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 35%;
+ 
+ 
+}
+ 
+ 
+.order-form h2 {
+  color: #333;
+  text-align: center;
+}
+ 
+.form-group {
+  margin-bottom: 15px;
+  text-align: center;
+}
+ 
+.input-field input[type="text"],
+.input-field input[type="date"] {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+ 
+}
+ 
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+ 
+button {
+  width: 40;
+  padding: 13px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+ 
+}
+ 
+button:hover {
+  background-color: #45a049;
+}
+ 
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #ccc;
+  color: #666;
+}
+ 
+ 
+.order-form {
+  max-width: 80%;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  border-top: 4px solid #e0e307;
+  border-bottom: 9px solid #02652c;
+  text-align: center;
+  border-top: 4px solid #e0e307;
+  border-bottom: 9px solid #02652c;
+  
+
+}
+ 
+ 
+.form-group {
+  margin-bottom: 15px;
+  text-align: center;
+}
+ 
+.input-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+ 
+.input-field input,
+.input-field select {
+  width: 40%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+ 
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+}
+ 
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+ 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  
+}
+ 
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+ 
+th {
+ 
+  background-color: #4caf50;
+  color: white;
+}
+ 
+p {
+  margin-top: 10px;
+  color: #333;
+}
+ 
+.order-section {
+  margin-top: 10px;
+  margin-left: 42%;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 185px;
+  height: 180px;
+  border-top: 3px solid #ffd700;
+  border-bottom: 7px solid #087c46;
+  color: #024f25;  
+  background-color: f0f0f0;
+}
+.order-section li:hover{
+color:rgb(91, 129, 53)
+}
+ 
+.order-form tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+ 
+ 
+.input-field {
+  margin-bottom: 15px;
+  text-align: center;
+}
+ 
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group select
+{
+  width: 320px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+ 
+ 
+.input-field input[type="text"]::placeholder ,
+.input-field input[type="number"]::placeholder,
+.input-field input[type="date"]::placeholder,
+.input-field select::placeholder
+{
+  color: #999;  
+}
+ 
+.order-section{
+  background-color: #f0f0f0;
+}
+.pagination {
+  width: auto;
+  padding: 5px;
+  margin: 4px;
+  border: none;
+  border-radius: 2px;
+  background-color: #07ba4b;
+  color: white;
+  cursor: pointer;
+}
+ 
+.pagination:hover{
+  background-color: #017105;
+}
+.tabledata {
+  width: 50%;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+.tabledata table {
+  width: 100%;
+  border: 1px solid #000; 
+}
+
+.tabledata th, .tabledata td {
+  border: 1px solid #000; 
+  padding: 8px; 
+  text-align: left; 
+  color: #000;
+}
+
+.tabledata th {
+  background-color: #f2f2f2; 
+
+}
+
+.bybutton{
+  margin: 0 auto;
+}
+.bybutton1{
+  margin-left: auto;
+}

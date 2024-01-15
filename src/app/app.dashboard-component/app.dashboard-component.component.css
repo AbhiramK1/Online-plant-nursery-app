@@ -1,0 +1,81 @@
+.container {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+ 
+h1 {
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  color: #333;
+}
+ 
+.nav-bar {
+  border-top: 4px solid #fcd911;
+  background-color: #038927e3;
+  color: white;
+  padding: 10px 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  height: 50px;
+}
+ 
+.nav-bar ul {
+  list-style: none;
+  padding: 0;
+}
+ 
+.nav-bar ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+ 
+.nav-bar ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+}
+ 
+.nav-bar ul li a:hover {
+  color: #ffd700;
+}
+ 
+.section {
+  display: none;
+}
+ 
+.section.active {
+  display: block;
+}
+ 
+.about {
+  background-image: url('https://media.istockphoto.com/id/627521208/photo/horticulture-business.jpg?s=612x612&w=0&k=20&c=x2RRn42ezWVwW4cABqaUSI_HWCE5TkjS2RMsB3jcGtg=');
+  background-size: 100% auto;
+  background-position: center;
+  padding: 20px;
+  display: block;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 93%;
+  max-height: fit-content;
+  margin: 20px auto;
+  border-radius: 4px;
+}
+ 
+.about p {
+  margin-bottom: 15px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgb(252, 250, 250);
+  color: #185f0e;
+  background-color: rgba(255, 255, 255, 0.751);
+  text-shadow: 2px 2px 4px rgb(255, 255, 255);
+  width: 100%;
+  height: 70%;
+  justify-content: center;
+  margin-top: 200px;
+  padding: 8px;
+}
+ 

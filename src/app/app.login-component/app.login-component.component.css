@@ -1,0 +1,130 @@
+body {
+  background-color: #f8f9f8;
+}
+.welcome-message {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+  font-style: italic;
+}
+
+.welcome-message h2{
+  font-size: 27px;
+  font-style: normal;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Form Styles */
+.login-form {
+  max-width: 350px;
+  margin: auto;
+  padding: 20px;
+  border-top: 4px solid #e0e307;
+  border-bottom: 9px solid #02652c;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  background: #eeeeee
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.icon-container {
+  flex: 0 0 auto; 
+}
+
+.icon {
+  width: 51px; 
+  height: 51px;
+  margin-right: 10px; 
+}
+
+.input-field input[type="email"],
+.input-field input[type="password"], .input-field input[type="username"] {
+  width: 290px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px; 
+  background-color: #ffffff; 
+  outline: none; 
+  box-sizing: border-box; 
+  font-size: 16px; 
+  color: #333; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.input-field input[type="email"]::placeholder,
+.input-field input[type="password"]::placeholder {
+  color: #999; 
+}
+
+.butn.submit{
+  width: 55%;
+  padding: 10px;
+
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button {
+  width: 55%;
+  padding: 10px;
+  margin-left: 25%;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #ccc; 
+  color: #666;
+}
+
+.input-field1 {
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.input-field1 label {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #17281d;
+}
+
+.input-field1 select {
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 145px;
+}

@@ -1,0 +1,59 @@
+<html><body>
+    <section *ngIf="showForm"><br>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+    <div class="welcome-message">
+      <h2>Welcome to The Green Bay</h2>
+      <p>Explore a world of greens and blooms!</p>
+    </div>
+    <div class="input-group">
+    <div class="input-field1">
+      <label>Select Account Type :  </label>
+      <select formControlName="userType">
+        <option value="administrator">Administrator</option>
+        <option (onclick)="searchUserType()" value="customer">Customer</option>
+      </select>
+    </div>
+  </div>
+    <div class="input-group">
+      <div class="icon-container">
+        <img src="https://cdn3.iconfinder.com/data/icons/login-26/36/user_enter-128.png" alt="User Icon" class="icon" />
+      </div>
+      <div *ngIf="userType?.value === 'customer'" class="input-field">
+        <input type="email" formControlName="email" placeholder="Email" />
+        <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="error-message">
+          <span *ngIf="email?.errors?.['email']">Enter a valid email</span>
+        </div>
+        </div>
+        <div *ngIf="userType?.value === 'administrator'" class="input-field">
+          <input type="username" formControlName="username" placeholder="Username" />
+          <div *ngIf="username?.invalid && (username?.dirty || username?.touched)" class="error-message">
+            <span *ngIf="username?.errors?.['username']">Enter a valid username</span>
+          </div>
+      </div>
+    </div>
+  
+    <div class="input-group">
+      <div class="icon-container">
+        <img src="https://cdn3.iconfinder.com/data/icons/login-26/36/unlock-128.png" alt="User Icon" class="icon" />
+      </div>
+      <div class="input-field">
+        <input type="password" formControlName="password" placeholder="Password" />
+    <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="error-message">
+      <span *ngIf="password?.errors?.['pattern']">Password must contain at least one uppercase letter, one number, and one special character</span>
+    </div>
+      </div>
+    </div >
+    <div class="butn">
+    <button type="submit" [disabled]="loginForm.invalid ||(email?.invalid && username?.invalid)|| password?.invalid">Login</button>
+    <br><br></div>
+    <div class="butn">
+      <div  *ngIf="userType?.value === 'customer'"  class="welcome-message"><p>Are you a new user?</p>
+    <button type="submit" (click)="navigateToSignup()">Signup</button></div>
+  </div>
+  </form>
+  <h2>{{ msg }}</h2>
+  <br><br></section>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+  </body></html>

@@ -1,0 +1,216 @@
+<body>
+
+  <app-dashboard-component></app-dashboard-component><br>
+
+  <div class="order-form" *ngIf="selection==='add' &&  userType === 'customer'">
+    <br>
+    <ng-container *ngIf="userType === 'customer'">
+      <button class="bybutton1" type="button" (click)="searchOrderById()">Search By Id</button><br><br>
+    </ng-container>
+    <h2>Add Order</h2>
+    <form #orderForm="ngForm" (ngSubmit)="addNewOrder()">
+      <div class="tabledata">
+        <table>
+          <tr>
+            <th>Seed Cost</th>
+            <th>Plant Cost</th>
+            <th>Planter Cost</th>
+          </tr>
+          <tr>
+            <td>{{seedCost}}</td>
+            <td>{{plantCost}}</td>
+            <td>{{planterCost}}</td>
+          </tr>
+        </table>
+      </div><br><br>
+
+
+      <div class="form-group">
+        <label><b>Select Transaction Mode : </b></label><br><br>
+        <select id="transactionMode" name="transactionMode" [(ngModel)]="order.transactionMode"
+          placeholder="Transaction mode" required>
+          <option value="" disabled selected>Select Transaction Mode</option>
+          <option value="Cash">Cash</option>
+          <option value="Credit Card">Credit Card</option>
+        </select>
+
+      </div>
+
+      <button type="submit" [disabled]="orderForm.invalid">Submit Order</button>
+
+    </form>
+    <p>{{ responseMessage }}</p>
+  </div>
+
+  <div class="order-form" *ngIf="selection==='update'">
+    <h2>Update Order by Id</h2>
+    <form #updateForm="ngForm" (ngSubmit)="updateOrder()">
+
+      <div class="form-group">
+        <label><b>Enter Order Id : </b></label><br><br>
+        <input type="number" id="orderId" name="orderId" [(ngModel)]="order.bookingOrderId" required
+          placeholder="Enter Order ID" [disabled]="editMode || userType === 'customer'">
+      </div>
+
+      <div class="form-group">
+        <label><b>Select Order Date : </b></label><br><br>
+        <input type="date" id="orderDate" name="orderDate" [(ngModel)]="order.orderDate" required
+          placeholder="Select Order Date" [disabled]="editMode">
+      </div>
+
+      <div class="form-group">
+        <label><b>Select Transaction Mode : </b></label><br><br>
+        <select id="transactionMode" name="transactionMode" [(ngModel)]="order.transactionMode" required>
+          <option value="" disabled selected>Select Transaction Mode</option>
+          <option value="Cash">Cash</option>
+          <option value="Credit Card">Credit Card</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label><b>Order Cost : </b></label><br><br>
+        <input type="number" step="0.01" id="totalCost" name="totalCost" [(ngModel)]="order.totalCost" required
+          placeholder="Enter Total Cost">
+      </div>
+
+      <button type="submit" [disabled]="updateForm.invalid">Update Order</button>
+    </form>
+    <p>{{ responseMessage }}</p>
+  </div>
+
+
+  <div *ngIf="userType === 'customer'">
+    <div class="order-form" *ngIf="selection==='search'">
+      <h2>View Order By ID</h2>
+      <form #viewForm="ngForm" (ngSubmit)="searchOrderById()">
+
+        <div class="form-group">
+          <label><b>Enter Your Order Id : </b></label><br><br>
+          <input type="number" id="orderIdToView" name="orderIdToView" [(ngModel)]="order.bookingOrderId"
+            placeholder="Order Id" required><br><br>
+        </div>
+        <button type="submit" (click)="searchHelper()" [disabled]="viewForm.invalid">View Order</button>
+
+      </form>
+      <div *ngIf="IdFlag ">
+        <table>
+          <tr>
+            <th>BookingOrder Id</th>
+            <th>Order Date</th>
+            <th>Transaction Mode</th>
+            <th>TotalCost</th>
+            <th>Update</th>
+            <th>Cancle</th>
+            <th>Order Status</th>
+
+          </tr>
+
+          <tr *ngFor="let c of orderList">
+            <td>{{c.bookingOrderId}}</td>
+            <td>{{c.orderDate}}</td>
+            <td>{{c.transactionMode}}</td>
+            <td>{{c.totalCost}}</td>
+            <td><button type="button" (click)="editOrder(c)">Update</button></td>
+            <td><button type="button" (click)="cancelOrder(c.bookingOrderId)">Cancel</button></td>
+            <td>{{c.status}}</td>
+
+          </tr>
+
+        </table>
+        <p>{{ responseMessage }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="userType === 'administrator'">
+    <div class="order-form" *ngIf="selection==='search'">
+      <h2>View Order By ID</h2>
+      <form #viewForm="ngForm" (ngSubmit)="searchOrderById()">
+
+        <div class="form-group">
+          <label><b>Enter Your Order Id : </b></label><br><br>
+          <input type="number" id="orderIdToView" name="orderIdToView" [(ngModel)]="order.bookingOrderId"
+            placeholder="Order Id" required><br><br>
+        </div>
+        <button type="submit" (click)="searchHelper()" [disabled]="viewForm.invalid">View Order</button>
+
+      </form>
+      <div *ngIf="IdFlag">
+        <table>
+          <tr>
+            <th>BookingOrder Id</th>
+            <th>Order Date</th>
+            <th>Transaction Mode</th>
+            <th>TotalCost</th>
+            <th>Order Status</th>
+
+
+
+          </tr>
+
+          <tr *ngFor="let c of orderList">
+            <td>{{c.bookingOrderId}}</td>
+            <td>{{c.orderDate}}</td>
+            <td>{{c.transactionMode}}</td>
+            <td>{{c.totalCost}}</td>
+            <td>{{c.status}}</td>
+
+
+          </tr>
+
+        </table>
+        <p>{{ responseMessage }}</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div *ngIf="userType === 'administrator'">
+
+    <div class="order-form" *ngIf="selection==='viewAll'">
+      <h2>All Orders</h2>
+      <button class="bybutton" type="button" (click)="searchOrderById()">Search By Id</button><br>
+      <form (ngSubmit)="viewAllOrder()">
+        <div>
+          <table>
+            <tr>
+              <th>BookingOrder Id</th>
+              <th>Order Date</th>
+              <th>Transaction Mode</th>
+              <th>TotalCost</th>
+              <th>Delete</th>
+              <th>Status</th>
+            </tr>
+
+            <tbody>
+              <ng-container
+                *ngFor="let c of orderList.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)">
+                <tr>
+                  <td>{{c.bookingOrderId}}</td>
+                  <td>{{c.orderDate}}</td>
+                  <td>{{c.transactionMode}}</td>
+                  <td>{{c.totalCost}}</td>
+                  <td><button type="button" (click)="deleteOrderById(c.bookingOrderId)">Delete</button></td>
+                  <td>{{c.status}}</td>
+
+                </tr>
+              </ng-container>
+            </tbody>
+            <br>
+          </table>
+          <p>{{ responseMessage }}</p>
+
+        </div>
+        <div>
+          <button class="pagination" *ngFor="let page of totalPages" (click)="setCurrentPage(page)">
+            {{ page }}
+          </button>
+          <button class="pagination" (click)="previousPage()">Previous</button>
+          <button class="pagination" (click)="nextPage()">Next</button>
+        </div>
+      </form>
+      <p>{{ responseMessage }}</p>
+    </div>
+  </div>

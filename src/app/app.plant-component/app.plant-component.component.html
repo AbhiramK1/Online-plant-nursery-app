@@ -1,0 +1,503 @@
+<!-- Plants Section -->
+
+<app-dashboard-component></app-dashboard-component><br>
+<div *ngIf="userType === 'administrator'">
+  <button class="add" type="button" (click)="add()">Add a Plant</button>
+</div>
+
+
+<div class="searchBy">
+  <form>
+    <select class="search" name="search" [(ngModel)]="selectedSearchOption" (change)="onSearchOptionChange()">
+      <option value="" disabled selected>Search By</option>
+      <option value="id">ID</option>
+      <option value="commonName">commonName</option>
+      <option value="typeOfPlant">typeOfPlant</option>
+
+    </select>
+
+
+    <!-- ID Search -->
+    <div class="idsearch" *ngIf="selectedSearchOption === 'id' && showDrop">
+      <form #plantForm="ngForm" (ngSubmit)="searchPlantById()">
+        <div class="form-group">
+          <input type="number" id="plantId" placeholder="Enter Plant ID" [(ngModel)]="plant.plantId" name="plantId"
+            required><br>
+          <small class="text-danger" *ngIf="plantForm.controls['plantId'].hasError('required')"
+            class="error-message">Plant Id is required.</small>
+        </div>
+        <button type="submit" [disabled]="plantForm.invalid">Search</button>
+
+      </form><br>
+    </div>
+
+    <!-- commonName Search -->
+    <div *ngIf="selectedSearchOption === 'commonName' && showDrop" class="idsearch">
+      <form #plantForm="ngForm">
+        <div class="form-group">
+          <input type="text" id="commonName" placeholder="Enter Plant commonName" [(ngModel)]="plant.commonName"
+            name="commonName" required pattern="^[A-Za-z]+$"><br>
+          <div
+            *ngIf="plantForm.controls['commonName'].invalid && (plantForm.controls['commonName'].dirty || plantForm.controls['commonName'].touched)">
+            <small class="text-danger" *ngIf="plantForm.controls['commonName'].hasError('required')"
+              class="error-message">Plant commonName is required.</small>
+            <small class="text-danger" *ngIf="plantForm.controls['commonName'].hasError('pattern')"
+              class="error-message">Plant commonName should contain alphabets.</small>
+          </div>
+        </div>
+
+        <button type="submit" [disabled]="plantForm.invalid" (click)="searchPlantByName()">Search</button>
+      </form><br>
+    </div>
+
+    <!-- typeOfPlant Search -->
+    <div *ngIf="selectedSearchOption === 'typeOfPlant' && showDrop" class="idsearch">
+      <form #plantForm="ngForm">
+        <div class="form-group">
+          <input type="text" id="typeOfPlant" placeholder="Enter Type Of Plant" [(ngModel)]="plant.typeOfPlant"
+            name="typeOfPlant" required pattern="^[A-Za-z]+$"><br>
+          <div
+            *ngIf="plantForm.controls['typeOfPlant'].invalid && (plantForm.controls['typeOfPlant'].dirty || plantForm.controls['typeOfPlant'].touched)">
+            <small class="text-danger" *ngIf="plantForm.controls['typeOfPlant'].hasError('required')"
+              class="error-message">Plant typeOfPlant is required.</small>
+            <small class="text-danger" *ngIf="plantForm.controls['typeOfPlant'].hasError('pattern')"
+              class="error-message">Type of Plant should contain alphabets.</small>
+          </div>
+        </div>
+
+        <button type="submit" [disabled]="plantForm.invalid" (click)="searchPlantByType()">Search</button>
+      </form><br>
+    </div>
+
+  </form>
+</div>
+
+<div class="planter-form" *ngIf="selection==='add' && showMethod ">
+  <h2>Add Plant</h2>
+  <form #plantForm="ngForm" (ngSubmit)="addNewPlant()">
+    <div class="form-group-form">
+      <input type="number" id="plantHeight" name="plantHeight" placeholder="Enter Plant Height"
+        [(ngModel)]="plant.plantHeight" required min="1" max="155">
+      <div
+        *ngIf="plantForm.controls['plantHeight'].invalid && (plantForm.controls['plantHeight'].dirty || plantForm.controls['plantHeight'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['plantHeight'].hasError('required')"
+          class="error-message">Plant Height is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['plantHeight'].hasError('min')" class="error-message">Plant
+          Height must be greater than 0.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['plantHeight'].hasError('max')" class="error-message">Plant
+          Height must be less than or equal to 155 cm.</small>
+      </div>
+    </div>
+    <div class="form-group-form">
+      <input type="text" id="bloomTime" name="bloomTime" placeholder="Enter Plant Bloom Time"
+        [(ngModel)]="plant.bloomTime" required pattern="^[\sA-Za-z]+$">
+      <div
+        *ngIf="plantForm.controls['bloomTime'].invalid && (plantForm.controls['bloomTime'].dirty || plantForm.controls['bloomTime'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['bloomTime'].hasError('required')"
+          class="error-message">BloomTime is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['bloomTime'].hasError('pattern')"
+          class="error-message">BloomTime should contain alphabets.</small>
+      </div>
+    </div>
+    <div class="form-group-form">
+      <input type="text" id="typeOfPlant" name="typeOfPlant" placeholder="Enter Plant Type Of Plant"
+        [(ngModel)]="plant.typeOfPlant" required pattern="^[\sA-Za-z]+$">
+      <div
+        *ngIf="plantForm.controls['typeOfPlant'].invalid && (plantForm.controls['typeOfPlant'].dirty || plantForm.controls['typeOfPlant'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['typeOfPlant'].hasError('required')"
+          class="error-message">TypeOfPlant is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['typeOfPlant'].hasError('pattern')"
+          class="error-message">TypeOfPlant should contain alphabets.</small>
+      </div>
+    </div>
+
+    <div class="form-group-form">
+      <input type="text" id="commonName" name="commonName" placeholder="Enter Plant Common Name"
+        [(ngModel)]="plant.commonName" required pattern="^[\sA-Za-z]+$">
+      <div
+        *ngIf="plantForm.controls['commonName'].invalid && (plantForm.controls['commonName'].dirty || plantForm.controls['commonName'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['commonName'].hasError('required')"
+          class="error-message">CommonName is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['commonName'].hasError('pattern')"
+          class="error-message">CommonName should contain alphabets.</small>
+      </div>
+    </div>
+
+    <div class="form-group-form">
+      <input type="text" id="Exposure" name="Exposure" placeholder="Enter Plant Exposure" [(ngModel)]="plant.exposure"
+        required pattern="^[\sA-Za-z]+$">
+      <div
+        *ngIf="plantForm.controls['Exposure'].invalid && (plantForm.controls['Exposure'].dirty || plantForm.controls['Exposure'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['Exposure'].hasError('required')"
+          class="error-message">Exposure is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['Exposure'].hasError('pattern')"
+          class="error-message">Exposure should contain alphabets.</small>
+      </div>
+    </div>
+
+    <div class="form-group-form">
+      <input type="text" id="flowerColor" name="flowerColor" placeholder="Enter Plant Flower Colour"
+        [(ngModel)]="plant.flowerColor" required pattern="^[\sA-Za-z]+$">
+      <div
+        *ngIf="plantForm.controls['flowerColor'].invalid && (plantForm.controls['flowerColor'].dirty || plantForm.controls['flowerColor'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['flowerColor'].hasError('required')"
+          class="error-message">FlowerColor is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['flowerColor'].hasError('pattern')"
+          class="error-message">FlowerColor should contain alphabets.</small>
+      </div>
+    </div>
+    <div class="form-group-form">
+      <input type="text" id="temperature" name="temperature" placeholder="Enter Plant Temperature"
+        [(ngModel)]="plant.temperature" required pattern="^[\sA-Za-z]+$">
+      <div
+        *ngIf="plantForm.controls['temperature'].invalid && (plantForm.controls['temperature'].dirty || plantForm.controls['temperature'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['temperature'].hasError('required')"
+          class="error-message">Temperature is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['temperature'].hasError('pattern')"
+          class="error-message">Temperature should contain alphabets.</small>
+      </div>
+    </div>
+    <div class="form-group-form">
+      <input type="text" id="description" name="description" placeholder="Enter Plant Description"
+        [(ngModel)]="plant.description" required pattern=^(?!\s+$)[a-zA-Z][a-zA-Z\s]{9,}$>
+      <div
+        *ngIf="plantForm.controls['description'].invalid && (plantForm.controls['description'].dirty || plantForm.controls['description'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['description'].hasError('required')"
+          class="error-message">Description is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['description'].hasError('pattern')"
+          class="error-message">Description should contain alphabets.</small>
+      </div>
+    </div>
+    <div class="form-group-form">
+      <input type="number" id="plantsStock" name="plantsStock" placeholder="Enter Plant Stock"
+        [(ngModel)]="plant.plantsStock" required min="1" max="100">
+      <div
+        *ngIf="plantForm.controls['plantsStock'].invalid && (plantForm.controls['plantsStock'].dirty || plantForm.controls['plantsStock'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['plantsStock'].hasError('required')"
+          class="error-message">PlantsStock is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['plantsStock'].hasError('min')"
+          class="error-message">PlantsStock must be greater than 0.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['plantsStock'].hasError('max')"
+          class="error-message">PlantsStock must be less than or equal to 100.</small>
+      </div>
+    </div>
+    <div class="form-group-form">
+      <input type="number" id="plantCost" name="plantCost" placeholder="Enter Plant Cost" [(ngModel)]="plant.plantCost"
+        required min="1" max="10000">
+      <div
+        *ngIf="plantForm.controls['plantCost'].invalid && (plantForm.controls['plantCost'].dirty || plantForm.controls['plantCost'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['plantCost'].hasError('required')"
+          class="error-message">Plant Cost is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['plantCost'].hasError('min')" class="error-message">Plant
+          Cost must be greater than 0.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['plantCost'].hasError('max')" class="error-message">Plant
+          Cost must be less than or equal to 10000.</small>
+      </div>
+    </div>
+    <div class="form-group-form">
+      <input type="number" id="planterId" name="planterId" placeholder="Enter planter Id"
+        [(ngModel)]="planter.planterId" required>
+      <div *ngIf="plantForm.controls['planterId'].invalid && (plantForm.controls['planterId'].dirty ||
+      plantForm.controls['planterId'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['planterId'].hasError('required')"
+          class="error-message">PlanterId is required.</small>
+      </div>
+    </div>
+    <button type="submit" [disabled]="plantForm.invalid">Add</button>
+  </form>
+  <p>{{responseMsg}}</p>
+</div>
+
+<!-- View All Plants Section -->
+<div class="planter-form" *ngIf="selection==='viewAll'">
+
+  <form #plantForm="ngForm" (ngSubmit)="viewAllPlants()">
+
+    <div>
+      <table>
+        <tr>
+          <th>Plant Id</th>
+          <th>Plant Height</th>
+          <th>Bloom Time</th>
+          <th>Type Of Plant</th>
+          <th>Common Name</th>
+          <th>Exposure</th>
+          <th>Flower Colour</th>
+          <th>Temperature</th>
+          <th>Description</th>
+          <th>Plant Stock</th>
+          <th>Plant Cost</th>
+        </tr>
+        <tbody>
+          <ng-container *ngFor="let d of plantList.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)">
+            <tr>
+              <td>{{d.plantId}}</td>
+              <td>{{d.plantHeight}}</td>
+              <td>{{d.bloomTime}}</td>
+              <td>{{d.typeOfPlant}}</td>
+              <td>{{d.commonName}}</td>
+              <td>{{d.exposure}}</td>
+              <td>{{d.flowerColor}}</td>
+              <td>{{d.temperature}}</td>
+              <td>{{d.description}}</td>
+              <td>{{d.plantsStock}}</td>
+              <td>{{d.plantCost}}</td>
+
+
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+    <div class="buttons">
+      <button class="pagination" *ngFor="let page of totalPages" (click)="setCurrentPage(page)">
+        {{ page }}
+      </button>
+      <button class="pagination" (click)="previousPage()">Previous</button>
+      <button class="pagination" (click)="nextPage()">Next</button>
+    </div>
+  </form>
+  <p>{{responseMsg}}</p>
+</div><br><br><br>
+
+
+
+<!-- View Plant By ID Section -->
+<div class="planter-form" *ngIf="showTable && userType === 'customer'">
+  <div>
+    <table>
+      <tr>
+        <th>Plant Id</th>
+        <th>Plant Height</th>
+        <th>Bloom Time</th>
+        <th>Type Of Plant</th>
+        <th>Common Name</th>
+        <th>Exposure</th>
+        <th>Flower Colour</th>
+        <th>Temperature</th>
+        <th>Description</th>
+        <th>Plant Stock</th>
+        <th>Plant Cost</th>
+        <th>Add To Cart</th>
+      </tr>
+      <tbody>
+        <ng-container *ngFor="let d of plantList.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)">
+          <tr>
+            <td>{{d.plantId}}</td>
+            <td>{{d.plantHeight}}</td>
+            <td>{{d.bloomTime}}</td>
+            <td>{{d.typeOfPlant}}</td>
+            <td>{{d.commonName}}</td>
+            <td>{{d.exposure}}</td>
+            <td>{{d.flowerColor}}</td>
+            <td>{{d.temperature}}</td>
+            <td>{{d.description}}</td>
+            <td>{{d.plantsStock}}</td>
+            <td>{{d.plantCost}}</td>
+            <td><button type="button" (click)="deletePlantById(d.plantId)">Add to cart</button></td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+
+
+
+  <div>
+    <button class="pagination" *ngFor="let page of totalPages" (click)="setCurrentPage(page)">
+      {{ page }}
+    </button>
+    <button class="pagination" (click)="previousPage()">Previous</button>
+    <button class="pagination" (click)="nextPage()">Next</button>
+  </div>
+
+  <p>{{responseMsg}}</p>
+</div>
+
+
+
+
+<div class="planter-form" *ngIf="showTable && userType === 'administrator'">
+  <div>
+    <table>
+      <tr>
+        <th>Plant Id</th>
+        <th>Plant Height</th>
+        <th>Bloom Time</th>
+        <th>Type Of Plant</th>
+        <th>Common Name</th>
+        <th>Exposure</th>
+        <th>Flower Colour</th>
+        <th>Temperature</th>
+        <th>Description</th>
+        <th>Plant Stock</th>
+        <th>Plant Cost</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+      <tbody>
+        <ng-container *ngFor="let d of plantList.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)">
+          <tr>
+            <td>{{d.plantId}}</td>
+            <td>{{d.plantHeight}}</td>
+            <td>{{d.bloomTime}}</td>
+            <td>{{d.typeOfPlant}}</td>
+            <td>{{d.commonName}}</td>
+            <td>{{d.exposure}}</td>
+            <td>{{d.flowerColor}}</td>
+            <td>{{d.temperature}}</td>
+            <td>{{d.description}}</td>
+            <td>{{d.plantsStock}}</td>
+            <td>{{d.plantCost}}</td>
+            <td><button type="button" (click)="editOrder(d)">Update</button></td>
+            <td><button type="button" (click)="deletePlantById(d.plantId)">Delete</button></td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <button class="pagination" *ngFor="let page of totalPages" (click)="setCurrentPage(page)">
+      {{ page }}
+    </button>
+    <button class="pagination" (click)="previousPage()">Previous</button>
+    <button class="pagination" (click)="nextPage()">Next</button>
+    <p>{{responseMsg}}</p>
+  </div>
+</div>
+
+<div *ngIf="!showTable">
+  <p>{{responseMsg}}</p>
+</div>
+
+
+<div class="planter-form" *ngIf="selection==='update' && showMethod ">
+  <h2>Update Plant</h2>
+  <form #plantForm="ngForm" (ngSubmit)="updatePlant()">
+    <div class="form-group-planterId">
+      <input type="number" id="plantId" name="plantId" placeholder="Enter Plant Id" [(ngModel)]="plant.plantId" required
+        readonly>
+    </div>
+    <div class="form-group-form">
+      <input type="number" id="plantHeight" name="plantHeight" placeholder="Enter Plant Height"
+        [(ngModel)]="plant.plantHeight" required min="1" max="155">
+      <div
+        *ngIf="plantForm.controls['plantHeight'].invalid && (plantForm.controls['plantHeight'].dirty || plantForm.controls['plantHeight'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['plantHeight'].hasError('required')"
+          class="error-message">Plant Height is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['plantHeight'].hasError('min')" class="error-message">Plant
+          Height must be greater than 0.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['plantHeight'].hasError('max')" class="error-message">Plant
+          Height must be less than or equal to 155 cm.</small>
+      </div>
+    </div>
+    <div class="form-group-form">
+      <input type="text" id="bloomTime" name="bloomTime" placeholder="Enter Plant Bloom Time"
+        [(ngModel)]="plant.bloomTime" required pattern="^[A-Za-z]+$">
+      <div
+        *ngIf="plantForm.controls['bloomTime'].invalid && (plantForm.controls['bloomTime'].dirty || plantForm.controls['bloomTime'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['bloomTime'].hasError('required')"
+          class="error-message">BloomTime is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['bloomTime'].hasError('pattern')"
+          class="error-message">BloomTime should contain alphabets.</small>
+      </div>
+    </div>
+    <div class="form-group-form">
+      <input type="text" id="typeOfPlant" name="typeOfPlant" placeholder="Enter Plant Type Of Plant"
+        [(ngModel)]="plant.typeOfPlant" required pattern="^[A-Za-z]+$">
+      <div
+        *ngIf="plantForm.controls['typeOfPlant'].invalid && (plantForm.controls['typeOfPlant'].dirty || plantForm.controls['typeOfPlant'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['typeOfPlant'].hasError('required')"
+          class="error-message">TypeOfPlant is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['typeOfPlant'].hasError('pattern')"
+          class="error-message">TypeOfPlant should contain alphabets.</small>
+      </div>
+    </div>
+
+    <div class="form-group-form">
+      <input type="text" id="commonName" name="commonName" placeholder="Enter Plant Common Name"
+        [(ngModel)]="plant.commonName" required pattern="^[A-Za-z]+$">
+      <div
+        *ngIf="plantForm.controls['commonName'].invalid && (plantForm.controls['commonName'].dirty || plantForm.controls['commonName'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['commonName'].hasError('required')"
+          class="error-message">CommonName is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['commonName'].hasError('pattern')"
+          class="error-message">CommonName should contain alphabets.</small>
+      </div>
+    </div>
+
+    <div class="form-group-form">
+      <input type="text" id="Exposure" name="Exposure" placeholder="Enter Plant Exposure" [(ngModel)]="plant.exposure"
+        required pattern="^[A-Za-z]+$">
+      <div
+        *ngIf="plantForm.controls['Exposure'].invalid && (plantForm.controls['Exposure'].dirty || plantForm.controls['Exposure'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['Exposure'].hasError('required')"
+          class="error-message">Exposure is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['Exposure'].hasError('pattern')"
+          class="error-message">Exposure should contain alphabets.</small>
+      </div>
+    </div>
+
+    <div class="form-group-form">
+      <input type="text" id="flowerColor" name="flowerColor" placeholder="Enter Plant Flower Colour"
+        [(ngModel)]="plant.flowerColor" required pattern="^[A-Za-z]+$">
+      <div
+        *ngIf="plantForm.controls['flowerColor'].invalid && (plantForm.controls['flowerColor'].dirty || plantForm.controls['flowerColor'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['flowerColor'].hasError('required')"
+          class="error-message">FlowerColor is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['flowerColor'].hasError('pattern')"
+          class="error-message">FlowerColor should contain alphabets.</small>
+      </div>
+    </div>
+    <div class="form-group-form">
+      <input type="text" id="temperature" name="temperature" placeholder="Enter Plant Temperature"
+        [(ngModel)]="plant.temperature" required pattern="^[A-Za-z]+$">
+      <div
+        *ngIf="plantForm.controls['temperature'].invalid && (plantForm.controls['temperature'].dirty || plantForm.controls['temperature'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['temperature'].hasError('required')"
+          class="error-message">Temperature is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['temperature'].hasError('pattern')"
+          class="error-message">Temperature should contain alphabets.</small>
+      </div>
+    </div>
+    <div class="form-group-form">
+      <input type="text" id="description" name="description" placeholder="Enter Plant Description"
+        [(ngModel)]="plant.description" required pattern=^[a-zA-Z][a-zA-Z\\s]{9,}$>
+      <div
+        *ngIf="plantForm.controls['description'].invalid && (plantForm.controls['description'].dirty || plantForm.controls['description'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['description'].hasError('required')"
+          class="error-message">Description is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['description'].hasError('pattern')"
+          class="error-message">Description should contain alphabets.</small>
+      </div>
+    </div>
+    <div class="form-group-form">
+      <input type="number" id="plantsStock" name="plantsStock" placeholder="Enter Plant Stock"
+        [(ngModel)]="plant.plantsStock" required min="1" max="100">
+      <div
+        *ngIf="plantForm.controls['plantsStock'].invalid && (plantForm.controls['plantsStock'].dirty || plantForm.controls['plantsStock'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['plantsStock'].hasError('required')"
+          class="error-message">PlantsStock is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['plantsStock'].hasError('min')"
+          class="error-message">PlantsStock must be greater than 0.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['plantsStock'].hasError('max')"
+          class="error-message">PlantsStock must be less than or equal to 100.</small>
+      </div>
+    </div>
+    <div class="form-group-form">
+      <input type="number" id="plantCost" name="plantCost" placeholder="Enter Plant Cost" [(ngModel)]="plant.plantCost"
+        required min="1" max="10000">
+      <div
+        *ngIf="plantForm.controls['plantCost'].invalid && (plantForm.controls['plantCost'].dirty || plantForm.controls['plantCost'].touched)">
+        <small class="text-danger" *ngIf="plantForm.controls['plantCost'].hasError('required')"
+          class="error-message">Plant Cost is required.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['plantCost'].hasError('min')" class="error-message">Plant
+          Cost must be greater than 0.</small>
+        <small class="text-danger" *ngIf="plantForm.controls['plantCost'].hasError('max')" class="error-message">Plant
+          Cost must be less than or equal to 10000.</small>
+      </div>
+    </div>
+    <button type="submit" [disabled]="plantForm.invalid">update</button>
+  </form>
+  <p>{{responseMsg}}</p>
+</div>

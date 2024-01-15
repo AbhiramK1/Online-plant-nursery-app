@@ -1,0 +1,37 @@
+<html><body>
+
+  <div class="container" >
+    <nav class="nav-bar">
+      <ul>
+        <li *ngIf="userType === 'administrator'"><a (click)="showPlantOptions()">Plants</a></li>
+        <li *ngIf="userType === 'administrator'"><a (click)="showSeedOptions()">Seeds</a></li>
+        <li *ngIf="userType === 'administrator'"><a (click)="showPlanterOptions()">Planters</a></li>
+        <li *ngIf="userType === 'administrator'"><a (click)="showOrderOptions()">Orders</a></li>
+        <li *ngIf="userType === 'administrator'"><a (click)="showCustomerOptions()">Customers</a></li>
+       
+        <li *ngIf="userType === 'customer'"><a (click)="showCustomerPlantOptions()">Plants</a></li>
+        <li *ngIf="userType === 'customer'"><a (click)="showCustomerSeedOptions()">Seeds</a></li>
+        <li *ngIf="userType === 'customer'"><a (click)="showCustomerPlanterOptions()">Planters</a></li>
+        <li *ngIf="userType === 'customer'"><a (click)="showCustomerOrderOptions()">Orders</a></li>
+        <li *ngIf="userType === 'customer'"><a href="#" (click)="showCustomerOptions()">Customers</a></li>
+      </ul>
+    </nav>
+  </div>
+ 
+  <div *ngIf="showBack">
+  <div  class="about">
+    <section>
+      <p><b>Embrace Nature's Wisdom with Green Bay - Your Premier Online Botanical Haven!</b><br>
+      At Green Bay, we transcend the conventional boundaries of an online plant nursery. Our cornerstone is the amalgamation of age-old botanical wisdom and contemporary knowledge, all rooted in a passion for flora.
+      Our story began with a mission to bridge the gap between nature's enigmatic allure and the digital landscape. Delving deeper than just providing plants, we've curated an ecosystem that nurtures not just greenery, but knowledge and appreciation for the botanical world.  
+      Unveil the marvels of plant life through our digital trove - a culmination of curated wisdom, enriched insights, and expert guidance. Each plant profile is a treasure trove of botanical knowledge, empowering enthusiasts and budding gardeners with the expertise to cultivate thriving, verdant landscapes.
+      At Green Bay, we believe in empowering individuals to be stewards of nature. Our platform is a haven where novices and seasoned plant lovers converge to learn, share experiences, and delve into the intricate secrets of each leaf, petal, and root.
+      Dedicated to elevating your botanical journey, our team of seasoned horticulturists and botanical aficionados curate a rich tapestry of plant diversity. Our offerings extend beyond the commonplace; we aim to introduce you to the unique, the rare, and the extraordinary.
+      We envision Green Bay as more than an e-commerce platform - it's a knowledge hub, a digital conservatory, and a thriving community where the passion for plants transcends barriers.
+      Step into Green Bay - Where the artistry of nature meets the richness of knowledge. Discover, learn, and nurture your green paradise with us
+      Welcome to Green Bay - Where knowledge grows, and nature thrives.</p>
+    </section>
+  </div>
+  </div>
+  <div><router-outlet></router-outlet></div>
+</body></html>

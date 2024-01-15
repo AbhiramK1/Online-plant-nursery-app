@@ -1,0 +1,84 @@
+body {
+    background-color: #f8f9f8;
+  }
+  .welcome-message {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+    font-style: italic;
+  }
+  
+  .welcome-message h2{
+    font-size: 27px;
+    font-style: normal;
+  }
+  
+/* Form Styles */
+.signup-form {
+    max-width: 430px;
+    margin: auto;
+    padding: 20px;
+    border-top: 4px solid #e0e307;
+    border-bottom: 11px solid #02652c;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    background: #eeeeee;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 10%;
+  }
+  
+  
+  .input-field input[type="text"],
+  .input-field input[type="email"],
+  .input-field input[type="password"] {
+    width: 340px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .input-field input[type="text"]::placeholder,
+  .input-field input[type="email"]::placeholder,
+  .input-field input[type="password"]::placeholder {
+    color: #999;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  button {
+    width: 55%;
+    padding: 13px;
+    margin-left: 25%;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #ccc;
+    color: #666;
+  }
+  

@@ -1,0 +1,427 @@
+.planter-section li:hover {
+  color: rgb(91, 129, 53)
+}
+
+body {
+  background-color: #f8f9f8;
+}
+
+.welcome-message {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+  font-style: italic;
+}
+
+.welcome-message h2 {
+  font-size: 27px;
+  font-style: normal;
+}
+
+.signup-form {
+  max-width: 390px;
+  margin: auto;
+  padding: 20px;
+  border-top: 4px solid #e0e307;
+  border-bottom: 9px solid #02652c;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  background: #eeeeee;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 35%;
+
+
+}
+
+
+.planter-form h2 {
+  color: #333;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.form-group-form {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.form-group-form input[type="text"],
+.form-group-form input[type="number"] {
+  width: 320px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+  width: 320px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin-left: 25%;
+
+}
+
+.form-group-planterId input[type="text"],
+.form-group-planterId input[type="number"] {
+  width: 320px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  background-color: #f8f8f8;
+  /* Light gray background */
+  color: #555;
+  /* Darker text color */
+  cursor: not-allowed;
+  /* Display "not allowed" cursor */
+  margin-bottom: 15px;
+}
+
+.form-group input[type="text"]::placeholder,
+.form-group input[type="number"]::placeholder {
+
+  color: #999;
+}
+
+.form-group-planterId input[type="text"]::placeholder,
+.form-group-planterId input[type="number"]::placeholder {
+
+  color: #999;
+}
+
+
+.error-message {
+  color: red;
+  font-size: 12px;
+
+}
+
+.error-message12 {
+  color: red;
+  font-size: 12px;
+
+}
+
+
+.error-messageId {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  left: 585px;
+  top: 300px;
+
+}
+
+.error-messagesh {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  left: 580px;
+  top: 300px;
+
+}
+
+.error-messagem1 {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  left: 500px;
+  top: 300px;
+
+}
+
+.error-messagem11 {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  left: 500px;
+  top: 395px;
+
+}
+
+.error-messagem21 {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  left: 500px;
+  top: 375px;
+
+}
+
+.error-messagem22 {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  left: 500px;
+  top: 395px;
+
+}
+
+.error-messagem23 {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  left: 500px;
+  top: 415px;
+
+}
+
+button {
+  width: 100px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #07ba4b;
+  color: white;
+  cursor: pointer;
+
+}
+
+button[type="submit"] {
+
+  background-color: #07ba4b;
+  color: white;
+  cursor: pointer;
+  margin-left: 80%;
+
+
+}
+
+
+button:hover {
+  background-color: #4e545a;
+}
+
+.input-field input[type="text"],
+.finput-field input[type="number"] {
+  width: 320px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #ccc;
+  color: #666;
+}
+
+
+.planter-form {
+  max-width: 1000px;
+  margin-left: 42%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  border-top: 4px solid #e0e307;
+  border-bottom: 9px solid #02652c;
+  text-align: center;
+
+}
+
+.planter-form tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+.input-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-field input,
+.input-field select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add {
+  width: 100px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #07ba4b;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 260px;
+  left: 80px;
+}
+
+.search {
+  color: #07ba4b;
+  z-index: 10;
+  position: absolute;
+  width: 180px;
+  height: 40px;
+  top: 255px;
+  left: 20%;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
+
+p {
+  margin-top: 10px;
+  margin-left: 100px;
+  color: rgb(247, 0, 0);
+}
+
+.idsearch {
+  z-index: 10;
+}
+
+.pagination {
+  width: auto;
+  padding: 5px;
+  margin: 4px;
+  border: none;
+  border-radius: 2px;
+  background-color: #07ba4b;
+  color: white;
+  cursor: pointer;
+}
+
+.pagination:hover {
+  background-color: #017105;
+}
+
+
+.input-field {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.form-group-cost input[type="text"],
+.form-group-cost input[type="number"] {
+  position: absolute;
+  top: 330px;
+  left: 170px;
+  width: 320px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin-left: 25%;
+
+
+}
+
+
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+  position: absolute;
+  top: 255px;
+  left: 170px;
+  width: 320px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.input-field input[type="text"],
+.finput-field input[type="number"] {
+  width: 320px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.input-field input[type="text"]::placeholder,
+.input-field input[type="number"]::placeholder {
+  color: #999;
+}
+
+.idsearch button[type="submit"] {
+  position: absolute;
+  top: 255px;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #07ba4b;
+  color: white;
+  cursor: pointer;
+  margin-left: 70%;
+}

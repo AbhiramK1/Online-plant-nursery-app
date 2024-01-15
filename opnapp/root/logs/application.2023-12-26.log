@@ -1,0 +1,359 @@
+2023-12-26 10:37:14.236 [restartedMain] INFO  com.opnapp.OpnappApplication - Starting OpnappApplication using Java 17.0.3 with PID 18552 (C:\Sprint Project 2\opnapp Backend\opnapp\target\classes started by abhirkul in C:\Sprint Project 2\opnapp Backend\opnapp)
+2023-12-26 10:37:14.288 [restartedMain] INFO  com.opnapp.OpnappApplication - No active profile set, falling back to 1 default profile: "default"
+2023-12-26 10:37:14.375 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-26 10:37:14.375 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-26 10:37:15.625 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-26 10:37:15.815 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 160 ms. Found 7 JPA repository interfaces.
+2023-12-26 10:37:17.130 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8050 (http)
+2023-12-26 10:37:17.148 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8050"]
+2023-12-26 10:37:17.154 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-12-26 10:37:17.155 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-26 10:37:17.280 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-12-26 10:37:17.283 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2904 ms
+2023-12-26 10:37:17.658 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-26 10:37:17.795 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-26 10:37:17.799 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-12-26 10:37:18.380 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-26 10:37:18.441 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-12-26 10:37:19.055 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f59d5f7
+2023-12-26 10:37:19.059 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-12-26 10:37:21.220 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-26 10:37:21.342 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-26 10:37:21.854 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-26 10:37:23.262 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-26 10:37:24.071 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-12-26 10:37:24.106 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8050"]
+2023-12-26 10:37:24.173 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8050 (http) with context path ''
+2023-12-26 10:37:24.193 [restartedMain] INFO  com.opnapp.OpnappApplication - Started OpnappApplication in 10.82 seconds (process running for 11.707)
+2023-12-26 10:39:23.801 [http-nio-8050-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-26 10:39:23.801 [http-nio-8050-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-12-26 10:39:23.802 [http-nio-8050-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-12-26 10:39:23.948 [http-nio-8050-exec-1] INFO  com.opnapp.services.SeedServiceImpl - Viewing all seeds
+2023-12-26 10:39:23.950 [http-nio-8050-exec-1] INFO  com.opnapp.DAO.SeedDaoImpl - Viewing all seeds
+2023-12-26 10:39:24.087 [http-nio-8050-exec-1] INFO  com.opnapp.DAO.SeedDaoImpl - All seeds found: [com.opnapp.models.Seed@21d0e558]
+2023-12-26 10:39:24.088 [http-nio-8050-exec-1] INFO  com.opnapp.services.SeedServiceImpl - All seeds found: [com.opnapp.models.Seed@21d0e558]
+2023-12-26 10:39:24.268 [http-nio-8050-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Infinite recursion (StackOverflowError)]
+2023-12-26 10:48:08.168 [http-nio-8050-exec-3] INFO  com.opnapp.services.SeedServiceImpl - Viewing all seeds
+2023-12-26 10:48:08.168 [http-nio-8050-exec-3] INFO  com.opnapp.DAO.SeedDaoImpl - Viewing all seeds
+2023-12-26 10:48:08.179 [http-nio-8050-exec-3] INFO  com.opnapp.DAO.SeedDaoImpl - All seeds found: [com.opnapp.models.Seed@f764754]
+2023-12-26 10:48:08.180 [http-nio-8050-exec-3] INFO  com.opnapp.services.SeedServiceImpl - All seeds found: [com.opnapp.models.Seed@f764754]
+2023-12-26 10:48:08.222 [http-nio-8050-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Infinite recursion (StackOverflowError)]
+2023-12-26 10:48:10.399 [http-nio-8050-exec-4] INFO  com.opnapp.services.SeedServiceImpl - Viewing all seeds
+2023-12-26 10:48:10.399 [http-nio-8050-exec-4] INFO  com.opnapp.DAO.SeedDaoImpl - Viewing all seeds
+2023-12-26 10:48:10.408 [http-nio-8050-exec-4] INFO  com.opnapp.DAO.SeedDaoImpl - All seeds found: [com.opnapp.models.Seed@329b28ff]
+2023-12-26 10:48:10.408 [http-nio-8050-exec-4] INFO  com.opnapp.services.SeedServiceImpl - All seeds found: [com.opnapp.models.Seed@329b28ff]
+2023-12-26 10:48:10.438 [http-nio-8050-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Infinite recursion (StackOverflowError)]
+2023-12-26 10:55:27.772 [restartedMain] INFO  com.opnapp.OpnappApplication - Starting OpnappApplication using Java 17.0.3 with PID 15420 (C:\Sprint Project 2\opnapp Backend\opnapp\target\classes started by abhirkul in C:\Sprint Project 2\opnapp Backend\opnapp)
+2023-12-26 10:55:27.776 [restartedMain] INFO  com.opnapp.OpnappApplication - No active profile set, falling back to 1 default profile: "default"
+2023-12-26 10:55:27.879 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-26 10:55:27.881 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-26 10:55:29.100 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-26 10:55:29.294 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 171 ms. Found 7 JPA repository interfaces.
+2023-12-26 10:55:30.625 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8050 (http)
+2023-12-26 10:55:30.639 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8050"]
+2023-12-26 10:55:30.643 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-12-26 10:55:30.643 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-26 10:55:30.790 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-12-26 10:55:30.795 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2910 ms
+2023-12-26 10:55:31.131 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-26 10:55:31.241 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-26 10:55:31.245 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-12-26 10:55:31.632 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-26 10:55:31.687 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-12-26 10:55:32.136 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c5f9221
+2023-12-26 10:55:32.138 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-12-26 10:55:33.827 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-26 10:55:34.018 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-26 10:55:34.562 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-26 10:55:35.865 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-26 10:55:36.816 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-12-26 10:55:36.840 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8050"]
+2023-12-26 10:55:36.888 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8050 (http) with context path ''
+2023-12-26 10:55:36.906 [restartedMain] INFO  com.opnapp.OpnappApplication - Started OpnappApplication in 10.007 seconds (process running for 11.148)
+2023-12-26 10:58:48.348 [http-nio-8050-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-26 10:58:48.348 [http-nio-8050-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-12-26 10:58:48.351 [http-nio-8050-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-12-26 10:58:48.410 [http-nio-8050-exec-1] INFO  c.opnapp.services.PlanterServiceImpl - Viewing all planters
+2023-12-26 10:58:48.413 [http-nio-8050-exec-1] INFO  com.opnapp.DAO.PlanterDAOImpl - Viewing all planters
+2023-12-26 10:58:48.568 [http-nio-8050-exec-1] INFO  com.opnapp.DAO.PlanterDAOImpl - All planters viewed successfully: 3
+2023-12-26 10:58:48.769 [http-nio-8050-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Infinite recursion (StackOverflowError)]
+2023-12-26 10:58:49.828 [http-nio-8050-exec-2] INFO  c.opnapp.services.PlanterServiceImpl - Viewing all planters
+2023-12-26 10:58:49.829 [http-nio-8050-exec-2] INFO  com.opnapp.DAO.PlanterDAOImpl - Viewing all planters
+2023-12-26 10:58:49.837 [http-nio-8050-exec-2] INFO  com.opnapp.DAO.PlanterDAOImpl - All planters viewed successfully: 3
+2023-12-26 10:58:49.877 [http-nio-8050-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Infinite recursion (StackOverflowError)]
+2023-12-26 10:59:04.470 [http-nio-8050-exec-3] INFO  c.opnapp.services.PlanterServiceImpl - Viewing all planters
+2023-12-26 10:59:04.470 [http-nio-8050-exec-3] INFO  com.opnapp.DAO.PlanterDAOImpl - Viewing all planters
+2023-12-26 10:59:04.481 [http-nio-8050-exec-3] INFO  com.opnapp.DAO.PlanterDAOImpl - All planters viewed successfully: 3
+2023-12-26 10:59:04.511 [http-nio-8050-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Infinite recursion (StackOverflowError)]
+2023-12-26 11:01:06.515 [http-nio-8050-exec-6] INFO  c.opnapp.services.PlanterServiceImpl - Viewing all planters
+2023-12-26 11:01:06.515 [http-nio-8050-exec-6] INFO  com.opnapp.DAO.PlanterDAOImpl - Viewing all planters
+2023-12-26 11:01:06.525 [http-nio-8050-exec-6] INFO  com.opnapp.DAO.PlanterDAOImpl - All planters viewed successfully: 3
+2023-12-26 11:01:06.555 [http-nio-8050-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Infinite recursion (StackOverflowError)]
+2023-12-26 11:04:02.280 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 4 class path changes (0 additions, 0 deletions, 4 modifications)
+2023-12-26 11:04:02.303 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8050"]
+2023-12-26 11:04:02.303 [Thread-5] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-12-26 11:04:02.305 [Thread-5] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-12-26 11:04:02.308 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8050"]
+2023-12-26 11:04:02.312 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8050"]
+2023-12-26 11:04:02.314 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-26 11:04:02.320 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-12-26 11:04:02.333 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-12-26 11:04:02.485 [restartedMain] INFO  com.opnapp.OpnappApplication - Starting OpnappApplication using Java 17.0.3 with PID 15420 (C:\Sprint Project 2\opnapp Backend\opnapp\target\classes started by abhirkul in C:\Sprint Project 2\opnapp Backend\opnapp)
+2023-12-26 11:04:02.486 [restartedMain] INFO  com.opnapp.OpnappApplication - No active profile set, falling back to 1 default profile: "default"
+2023-12-26 11:04:02.876 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-26 11:04:02.943 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 7 JPA repository interfaces.
+2023-12-26 11:04:03.104 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8050 (http)
+2023-12-26 11:04:03.104 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8050"]
+2023-12-26 11:04:03.105 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-12-26 11:04:03.106 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-26 11:04:03.145 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-12-26 11:04:03.146 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 654 ms
+2023-12-26 11:04:03.207 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-26 11:04:03.216 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-26 11:04:03.218 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2023-12-26 11:04:03.251 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@23e01a02
+2023-12-26 11:04:03.251 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2023-12-26 11:04:03.456 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-26 11:04:03.511 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-26 11:04:03.899 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-26 11:04:04.036 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-12-26 11:04:04.045 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8050"]
+2023-12-26 11:04:04.055 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8050 (http) with context path ''
+2023-12-26 11:04:04.060 [restartedMain] INFO  com.opnapp.OpnappApplication - Started OpnappApplication in 1.639 seconds (process running for 518.302)
+2023-12-26 11:04:04.064 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2023-12-26 11:04:44.676 [http-nio-8050-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-26 11:04:44.676 [http-nio-8050-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-12-26 11:04:44.678 [http-nio-8050-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-12-26 11:04:44.683 [http-nio-8050-exec-2] INFO  c.opnapp.services.PlanterServiceImpl - Viewing all planters
+2023-12-26 11:04:44.685 [http-nio-8050-exec-2] INFO  com.opnapp.DAO.PlanterDAOImpl - Viewing all planters
+2023-12-26 11:04:44.694 [http-nio-8050-exec-2] INFO  com.opnapp.DAO.PlanterDAOImpl - All planters viewed successfully: 3
+2023-12-26 11:05:09.506 [http-nio-8050-exec-3] INFO  c.opnapp.services.PlanterServiceImpl - Viewing all planters
+2023-12-26 11:05:09.506 [http-nio-8050-exec-3] INFO  com.opnapp.DAO.PlanterDAOImpl - Viewing all planters
+2023-12-26 11:05:09.517 [http-nio-8050-exec-3] INFO  com.opnapp.DAO.PlanterDAOImpl - All planters viewed successfully: 3
+2023-12-26 11:06:56.511 [http-nio-8050-exec-6] INFO  com.opnapp.services.SeedServiceImpl - Viewing all seeds
+2023-12-26 11:06:56.512 [http-nio-8050-exec-6] INFO  com.opnapp.DAO.SeedDaoImpl - Viewing all seeds
+2023-12-26 11:06:56.538 [http-nio-8050-exec-6] INFO  com.opnapp.DAO.SeedDaoImpl - All seeds found: [com.opnapp.models.Seed@31290484]
+2023-12-26 11:06:56.538 [http-nio-8050-exec-6] INFO  com.opnapp.services.SeedServiceImpl - All seeds found: [com.opnapp.models.Seed@31290484]
+2023-12-26 11:14:41.158 [http-nio-8050-exec-1] INFO  c.o.services.CustomerServiceImpl - Viewing all customers...
+2023-12-26 11:14:41.215 [http-nio-8050-exec-1] INFO  com.opnapp.DAO.CustomerDAOImpl - Viewed all active customers
+2023-12-26 11:16:51.997 [http-nio-8050-exec-5] INFO  c.o.services.CustomerServiceImpl - Viewing all customers...
+2023-12-26 11:16:52.010 [http-nio-8050-exec-5] INFO  com.opnapp.DAO.CustomerDAOImpl - Viewed all active customers
+2023-12-26 11:17:37.449 [http-nio-8050-exec-6] INFO  c.opnapp.services.OrderServiceImpl - Viewing all orders
+2023-12-26 11:17:37.512 [http-nio-8050-exec-6] INFO  com.opnapp.DAO.OrderDAOImpl - Retrieved all orders successfully. Total orders: 0
+2023-12-26 11:17:38.964 [http-nio-8050-exec-7] INFO  c.opnapp.services.OrderServiceImpl - Viewing all orders
+2023-12-26 11:17:38.977 [http-nio-8050-exec-7] INFO  com.opnapp.DAO.OrderDAOImpl - Retrieved all orders successfully. Total orders: 0
+2023-12-26 11:17:45.969 [http-nio-8050-exec-8] INFO  c.opnapp.services.OrderServiceImpl - Viewing all orders
+2023-12-26 11:17:45.980 [http-nio-8050-exec-8] INFO  com.opnapp.DAO.OrderDAOImpl - Retrieved all orders successfully. Total orders: 0
+2023-12-26 11:19:17.036 [http-nio-8050-exec-10] INFO  c.opnapp.services.OrderServiceImpl - Viewing all orders
+2023-12-26 11:19:17.045 [http-nio-8050-exec-10] INFO  com.opnapp.DAO.OrderDAOImpl - Retrieved all orders successfully. Total orders: 0
+2023-12-26 11:24:14.311 [http-nio-8050-exec-2] INFO  c.opnapp.services.OrderServiceImpl - Viewing all orders
+2023-12-26 11:24:14.316 [http-nio-8050-exec-2] INFO  com.opnapp.DAO.OrderDAOImpl - Retrieved all orders successfully. Total orders: 0
+2023-12-26 11:26:17.917 [http-nio-8050-exec-6] INFO  c.opnapp.services.OrderServiceImpl - Adding order: com.opnapp.models.Order@72970a60
+2023-12-26 11:26:17.923 [http-nio-8050-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.opnapp.exception.InvalidEntityException: Trasaction modes must be 'CASH' OR 'CREDIT CARD']
+2023-12-26 11:26:39.322 [http-nio-8050-exec-8] INFO  c.opnapp.services.OrderServiceImpl - Adding order: com.opnapp.models.Order@2045d495
+2023-12-26 11:26:39.364 [http-nio-8050-exec-8] INFO  com.opnapp.DAO.OrderDAOImpl - Order added successfully: com.opnapp.models.Order@2045d495
+2023-12-26 11:27:08.535 [http-nio-8050-exec-9] INFO  c.opnapp.services.OrderServiceImpl - Viewing all orders
+2023-12-26 11:27:08.541 [http-nio-8050-exec-9] INFO  com.opnapp.DAO.OrderDAOImpl - Retrieved all orders successfully. Total orders: 1
+2023-12-26 14:07:26.944 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=16m26s342ms272µs600ns).
+2023-12-26 15:27:59.604 [http-nio-8050-exec-3] INFO  c.o.services.CustomerServiceImpl - Viewing all customers...
+2023-12-26 15:27:59.645 [http-nio-8050-exec-3] INFO  com.opnapp.DAO.CustomerDAOImpl - Viewed all active customers
+2023-12-26 15:28:03.133 [http-nio-8050-exec-2] INFO  c.o.services.CustomerServiceImpl - Viewing all customers...
+2023-12-26 15:28:03.145 [http-nio-8050-exec-2] INFO  com.opnapp.DAO.CustomerDAOImpl - Viewed all active customers
+2023-12-26 15:28:41.257 [http-nio-8050-exec-4] INFO  c.opnapp.services.OrderServiceImpl - Viewing all orders
+2023-12-26 15:28:41.280 [http-nio-8050-exec-4] INFO  com.opnapp.DAO.OrderDAOImpl - Retrieved all orders successfully. Total orders: 1
+2023-12-26 15:29:29.310 [http-nio-8050-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.String> com.opnapp.controllers.CustomerController.deleteCustomer(com.opnapp.models.Customer) throws com.opnapp.exception.InvalidEntityException]
+2023-12-26 15:30:13.610 [http-nio-8050-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "undefined"]
+2023-12-26 15:30:18.138 [http-nio-8050-exec-8] INFO  c.opnapp.services.OrderServiceImpl - Viewing order with ID: 1
+2023-12-26 15:30:18.202 [http-nio-8050-exec-8] INFO  com.opnapp.DAO.OrderDAOImpl - Order found successfully: com.opnapp.models.Order@6f8b21cf
+2023-12-26 15:30:40.275 [http-nio-8050-exec-9] INFO  c.opnapp.services.OrderServiceImpl - Viewing order with ID: 1
+2023-12-26 15:30:40.283 [http-nio-8050-exec-9] INFO  com.opnapp.DAO.OrderDAOImpl - Order found successfully: com.opnapp.models.Order@1d2df6be
+2023-12-26 15:31:18.761 [http-nio-8050-exec-1] INFO  c.opnapp.services.PlanterServiceImpl - Viewing all planters
+2023-12-26 15:31:18.762 [http-nio-8050-exec-1] INFO  com.opnapp.DAO.PlanterDAOImpl - Viewing all planters
+2023-12-26 15:31:18.773 [http-nio-8050-exec-1] INFO  com.opnapp.DAO.PlanterDAOImpl - All planters viewed successfully: 3
+2023-12-26 15:59:59.082 [http-nio-8050-exec-2] INFO  c.opnapp.services.PlantServiceImpl - Viewing all plants
+2023-12-26 15:59:59.084 [http-nio-8050-exec-2] INFO  com.opnapp.DAO.PlantDaoImpl - Viewing all plants
+2023-12-26 16:11:09.544 [http-nio-8050-exec-6] WARN  o.s.h.c.j.MappingJackson2HttpMessageConverter - Failed to evaluate Jackson deserialization for type [[simple type, class com.opnapp.models.Planter]]: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Multiple back-reference properties with name 'defaultReference'
+2023-12-26 16:11:09.546 [http-nio-8050-exec-6] WARN  o.s.h.c.j.MappingJackson2HttpMessageConverter - Failed to evaluate Jackson deserialization for type [[simple type, class com.opnapp.models.Planter]]: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Multiple back-reference properties with name 'defaultReference'
+2023-12-26 16:11:09.550 [http-nio-8050-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/json;charset=UTF-8' is not supported]
+2023-12-26 16:15:03.611 [http-nio-8050-exec-7] INFO  c.opnapp.services.PlantServiceImpl - Viewing all plants
+2023-12-26 16:15:03.612 [http-nio-8050-exec-7] INFO  com.opnapp.DAO.PlantDaoImpl - Viewing all plants
+2023-12-26 16:15:09.914 [http-nio-8050-exec-8] INFO  c.opnapp.services.PlantServiceImpl - Viewing all plants
+2023-12-26 16:15:09.914 [http-nio-8050-exec-8] INFO  com.opnapp.DAO.PlantDaoImpl - Viewing all plants
+2023-12-26 16:25:26.365 [http-nio-8050-exec-10] INFO  c.opnapp.services.PlantServiceImpl - Viewing all plants
+2023-12-26 16:25:26.365 [http-nio-8050-exec-10] INFO  com.opnapp.DAO.PlantDaoImpl - Viewing all plants
+2023-12-26 16:25:37.697 [http-nio-8050-exec-1] INFO  c.opnapp.services.PlantServiceImpl - Viewing all plants
+2023-12-26 16:25:37.697 [http-nio-8050-exec-1] INFO  com.opnapp.DAO.PlantDaoImpl - Viewing all plants
+2023-12-26 16:27:12.458 [http-nio-8050-exec-2] INFO  c.opnapp.services.PlantServiceImpl - Viewing all plants
+2023-12-26 16:27:12.459 [http-nio-8050-exec-2] INFO  com.opnapp.DAO.PlantDaoImpl - Viewing all plants
+2023-12-26 16:28:03.235 [http-nio-8050-exec-4] INFO  c.o.services.CustomerServiceImpl - Viewing all customers...
+2023-12-26 16:28:03.242 [http-nio-8050-exec-4] INFO  com.opnapp.DAO.CustomerDAOImpl - Viewed all active customers
+2023-12-26 16:49:22.839 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-26 16:49:22.855 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:49:22.855 [Thread-7] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-12-26 16:49:22.856 [Thread-7] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-12-26 16:49:22.859 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:49:22.861 [Thread-7] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:49:22.863 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-26 16:49:22.867 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2023-12-26 16:49:22.874 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2023-12-26 16:49:23.006 [restartedMain] INFO  com.opnapp.OpnappApplication - Starting OpnappApplication using Java 17.0.3 with PID 15420 (C:\Sprint Project 2\opnapp Backend\opnapp\target\classes started by abhirkul in C:\Sprint Project 2\opnapp Backend\opnapp)
+2023-12-26 16:49:23.006 [restartedMain] INFO  com.opnapp.OpnappApplication - No active profile set, falling back to 1 default profile: "default"
+2023-12-26 16:49:23.226 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-26 16:49:23.265 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 7 JPA repository interfaces.
+2023-12-26 16:49:23.368 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8050 (http)
+2023-12-26 16:49:23.369 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:49:23.369 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-12-26 16:49:23.369 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-26 16:49:23.389 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-12-26 16:49:23.389 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 380 ms
+2023-12-26 16:49:23.423 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-26 16:49:23.428 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-26 16:49:23.429 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2023-12-26 16:49:23.442 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58bb4024
+2023-12-26 16:49:23.443 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2023-12-26 16:49:23.552 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-26 16:49:23.601 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-26 16:49:23.841 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-26 16:49:23.919 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-12-26 16:49:23.922 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:49:23.927 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8050 (http) with context path ''
+2023-12-26 16:49:23.929 [restartedMain] INFO  com.opnapp.OpnappApplication - Started OpnappApplication in 0.955 seconds (process running for 21242.421)
+2023-12-26 16:49:23.930 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2023-12-26 16:52:39.310 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2023-12-26 16:52:39.325 [Thread-11] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:52:39.325 [Thread-11] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-12-26 16:52:39.326 [Thread-11] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:52:39.328 [Thread-11] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:52:39.328 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-26 16:52:39.329 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2023-12-26 16:52:39.333 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2023-12-26 16:52:39.406 [restartedMain] INFO  com.opnapp.OpnappApplication - Starting OpnappApplication using Java 17.0.3 with PID 15420 (C:\Sprint Project 2\opnapp Backend\opnapp\target\classes started by abhirkul in C:\Sprint Project 2\opnapp Backend\opnapp)
+2023-12-26 16:52:39.406 [restartedMain] INFO  com.opnapp.OpnappApplication - No active profile set, falling back to 1 default profile: "default"
+2023-12-26 16:52:39.570 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-26 16:52:39.605 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 7 JPA repository interfaces.
+2023-12-26 16:52:39.676 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8050 (http)
+2023-12-26 16:52:39.676 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:52:39.676 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-12-26 16:52:39.676 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-26 16:52:39.695 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-12-26 16:52:39.695 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 287 ms
+2023-12-26 16:52:39.724 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-26 16:52:39.730 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-26 16:52:39.731 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2023-12-26 16:52:39.744 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55bd41f8
+2023-12-26 16:52:39.744 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2023-12-26 16:52:39.838 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-26 16:52:39.868 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-26 16:52:40.023 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-26 16:52:40.081 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-12-26 16:52:40.086 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:52:40.091 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8050 (http) with context path ''
+2023-12-26 16:52:40.094 [restartedMain] INFO  com.opnapp.OpnappApplication - Started OpnappApplication in 0.712 seconds (process running for 21438.589)
+2023-12-26 16:52:40.096 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2023-12-26 16:53:00.003 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-26 16:53:00.018 [Thread-15] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:53:00.018 [Thread-15] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-12-26 16:53:00.021 [Thread-15] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:53:00.024 [Thread-15] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:53:00.026 [Thread-15] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-26 16:53:00.027 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2023-12-26 16:53:00.033 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2023-12-26 16:53:00.107 [restartedMain] INFO  com.opnapp.OpnappApplication - Starting OpnappApplication using Java 17.0.3 with PID 15420 (C:\Sprint Project 2\opnapp Backend\opnapp\target\classes started by abhirkul in C:\Sprint Project 2\opnapp Backend\opnapp)
+2023-12-26 16:53:00.107 [restartedMain] INFO  com.opnapp.OpnappApplication - No active profile set, falling back to 1 default profile: "default"
+2023-12-26 16:53:00.260 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-26 16:53:00.292 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 7 JPA repository interfaces.
+2023-12-26 16:53:00.349 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8050 (http)
+2023-12-26 16:53:00.349 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:53:00.349 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-12-26 16:53:00.349 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-26 16:53:00.363 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-12-26 16:53:00.363 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 254 ms
+2023-12-26 16:53:00.382 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-26 16:53:00.386 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-26 16:53:00.387 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2023-12-26 16:53:00.396 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4d1a97c7
+2023-12-26 16:53:00.396 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2023-12-26 16:53:00.461 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-26 16:53:00.486 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-26 16:53:00.660 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-26 16:53:00.725 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-12-26 16:53:00.728 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:53:00.734 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8050 (http) with context path ''
+2023-12-26 16:53:00.737 [restartedMain] INFO  com.opnapp.OpnappApplication - Started OpnappApplication in 0.655 seconds (process running for 21459.232)
+2023-12-26 16:53:00.738 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2023-12-26 16:53:32.937 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-26 16:53:32.953 [Thread-19] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:53:32.953 [Thread-19] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-12-26 16:53:32.955 [Thread-19] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:53:32.956 [Thread-19] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:53:32.956 [Thread-19] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-26 16:53:32.957 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2023-12-26 16:53:32.961 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2023-12-26 16:53:33.025 [restartedMain] INFO  com.opnapp.OpnappApplication - Starting OpnappApplication using Java 17.0.3 with PID 15420 (C:\Sprint Project 2\opnapp Backend\opnapp\target\classes started by abhirkul in C:\Sprint Project 2\opnapp Backend\opnapp)
+2023-12-26 16:53:33.025 [restartedMain] INFO  com.opnapp.OpnappApplication - No active profile set, falling back to 1 default profile: "default"
+2023-12-26 16:53:33.161 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-26 16:53:33.192 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 7 JPA repository interfaces.
+2023-12-26 16:53:33.248 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8050 (http)
+2023-12-26 16:53:33.248 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:53:33.248 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-12-26 16:53:33.248 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-26 16:53:33.274 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-12-26 16:53:33.274 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 247 ms
+2023-12-26 16:53:33.297 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-26 16:53:33.301 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-26 16:53:33.302 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+2023-12-26 16:53:33.312 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c04f433
+2023-12-26 16:53:33.313 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+2023-12-26 16:53:33.375 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-26 16:53:33.399 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-26 16:53:33.548 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-26 16:53:33.599 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-12-26 16:53:33.601 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:53:33.606 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8050 (http) with context path ''
+2023-12-26 16:53:33.608 [restartedMain] INFO  com.opnapp.OpnappApplication - Started OpnappApplication in 0.602 seconds (process running for 21492.103)
+2023-12-26 16:53:33.608 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2023-12-26 16:53:48.382 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-12-26 16:53:48.393 [Thread-23] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:53:48.393 [Thread-23] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-12-26 16:53:48.395 [Thread-23] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:53:48.396 [Thread-23] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:53:48.397 [Thread-23] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-26 16:53:48.397 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+2023-12-26 16:53:48.401 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+2023-12-26 16:53:48.478 [restartedMain] INFO  com.opnapp.OpnappApplication - Starting OpnappApplication using Java 17.0.3 with PID 15420 (C:\Sprint Project 2\opnapp Backend\opnapp\target\classes started by abhirkul in C:\Sprint Project 2\opnapp Backend\opnapp)
+2023-12-26 16:53:48.478 [restartedMain] INFO  com.opnapp.OpnappApplication - No active profile set, falling back to 1 default profile: "default"
+2023-12-26 16:53:48.611 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-26 16:53:48.647 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 7 JPA repository interfaces.
+2023-12-26 16:53:48.712 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8050 (http)
+2023-12-26 16:53:48.713 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:53:48.713 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-12-26 16:53:48.713 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-26 16:53:48.727 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-12-26 16:53:48.727 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 247 ms
+2023-12-26 16:53:48.747 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-26 16:53:48.751 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-26 16:53:48.751 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+2023-12-26 16:53:48.760 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e69d3c7
+2023-12-26 16:53:48.760 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+2023-12-26 16:53:48.838 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-26 16:53:48.881 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-26 16:53:49.101 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-26 16:53:49.185 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-12-26 16:53:49.190 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8050"]
+2023-12-26 16:53:49.196 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8050 (http) with context path ''
+2023-12-26 16:53:49.197 [restartedMain] INFO  com.opnapp.OpnappApplication - Started OpnappApplication in 0.742 seconds (process running for 21507.693)
+2023-12-26 16:53:49.198 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2023-12-26 16:58:18.432 [http-nio-8050-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-26 16:58:18.433 [http-nio-8050-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-12-26 16:58:18.433 [http-nio-8050-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-12-26 16:58:18.434 [http-nio-8050-exec-1] INFO  c.o.services.CustomerServiceImpl - Viewing all customers...
+2023-12-26 16:58:18.439 [http-nio-8050-exec-1] INFO  com.opnapp.DAO.CustomerDAOImpl - Viewed all active customers
+2023-12-26 17:06:27.485 [http-nio-8050-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "undefined"]
+2023-12-26 17:06:45.087 [http-nio-8050-exec-4] INFO  c.o.services.CustomerServiceImpl - Viewing customer by ID: 1
+2023-12-26 17:06:45.114 [http-nio-8050-exec-4] INFO  com.opnapp.DAO.CustomerDAOImpl - Viewed customer with ID: 1
+2023-12-26 17:07:32.810 [http-nio-8050-exec-6] INFO  c.o.services.CustomerServiceImpl - Deleting customer...
+2023-12-26 17:07:32.831 [http-nio-8050-exec-6] INFO  com.opnapp.DAO.CustomerDAOImpl - Customer deleted successfully: null
+2023-12-26 17:07:41.618 [http-nio-8050-exec-7] INFO  c.o.services.CustomerServiceImpl - Viewing all customers...
+2023-12-26 17:07:41.623 [http-nio-8050-exec-7] INFO  com.opnapp.DAO.CustomerDAOImpl - Viewed all active customers
+2023-12-26 17:07:48.966 [http-nio-8050-exec-8] INFO  c.o.services.CustomerServiceImpl - Deleting customer...
+2023-12-26 17:07:48.970 [http-nio-8050-exec-8] INFO  com.opnapp.DAO.CustomerDAOImpl - Customer deleted successfully: null
