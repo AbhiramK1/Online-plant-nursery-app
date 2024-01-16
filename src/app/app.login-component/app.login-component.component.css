@@ -128,3 +128,8 @@ button:disabled {
   font-size: 14px;
   width: 145px;
 }
+.butn p{
+  position :absolute;
+  left: 45%;
+  top: 93%;
+}
