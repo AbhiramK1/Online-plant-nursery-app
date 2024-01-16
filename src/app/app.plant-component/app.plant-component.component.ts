@@ -67,16 +67,8 @@ export class AppPlantComponentComponent {
       this.plant.description = '',
       this.plant.plantsStock = null,
       this.plant.plantCost = null,
-      this.plant.planter.planterId = null;
-    this.plant.planter.planterHeight = null;
-    this.plant.planter.planterCapacity = null;
-    this.plant.planter.planterHoles = null;
-    this.plant.planter.planterColor = '';
-    this.plant.planter.planterShape = '';
-    this.plant.planter.planterStock = null;
-    this.plant.planter.planterCost = null;
-    this.plant.planter.minCost = null;
-    this.plant.planter.maxCost = null;
+      this.planter.planterId = null;
+   
 
   }
   onSearchOptionChange() {
@@ -87,10 +79,12 @@ export class AppPlantComponentComponent {
     }
   }
   add() {
+    console.log("geoijk");
     this.selection = 'add';
     this.resetForm();
     this.showMethod = true;
     this.showDrop = false;
+    this.showTable=false;
   }
   searchHelper() { this.showDrop = false }
   searchHelper2() { this.showDrop = true }
@@ -112,6 +106,7 @@ export class AppPlantComponentComponent {
   }
   addNewPlant() {
     this.showMethod = true;
+    this.plant.planter=this.planter;
     this.plantService.addPlant(this.plant).subscribe(
       data => {
         this.plantList = [];

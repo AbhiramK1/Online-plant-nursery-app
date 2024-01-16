@@ -15,6 +15,9 @@ export class AppDashboardComponentComponent {
   hideSection(): void {
     this.showBack = false;
   }
+  logout(){
+    this.router.navigate(['/permanent'],{skipLocationChange : true});
+  }
   showPlantOptions(): void {
     this.hideSection();
     this.router.navigate(['/plant']);

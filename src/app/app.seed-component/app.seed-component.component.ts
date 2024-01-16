@@ -114,7 +114,7 @@ export class AppSeedComponentComponent {
 
   
   addToCart(seed: any){
-    CurrentUser.setSeedCost(CurrentUser.getSeedCost()+seed.Cost);
+    CurrentUser.setSeedCost(CurrentUser.getSeedCost()+seed.cost);
     this.responseMsg ='Added to cart';
   }
 

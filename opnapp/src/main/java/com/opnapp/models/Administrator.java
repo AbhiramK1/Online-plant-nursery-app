@@ -13,7 +13,7 @@ public class Administrator {
 	private String adminUserId;
 	private String adminPassword;
 	private Boolean isDeleted;
-	
+	 
 	public Administrator() {this.isDeleted = false;}
 	public Administrator(String adminUserId, String adminPassword) {
 		this.adminUserId = adminUserId;

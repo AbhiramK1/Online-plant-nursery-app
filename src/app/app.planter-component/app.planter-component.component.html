@@ -19,7 +19,7 @@
         <div  class="idsearch" *ngIf="selectedSearchOption === 'id' && showDrop">  
             <form #planterForm="ngForm" (ngSubmit)="searchPlanter()">
                 <div class="form-group">
-                    <input type="number" id="planterId" placeholder="Enter Planter ID" [(ngModel)]="planter1.planterId"
+                    <input type="number" id="planterId" placeholder="Enter Planter ID" [(ngModel)]="planter.planterId"
                         name="planterId" required>
                         <div *ngIf="planterForm.controls['planterId'].invalid && (planterForm.controls['planterId'].dirty || planterForm.controls['planterId'].touched)">
                     <small class="text-danger" *ngIf="planterForm.controls['planterId'].hasError('required')"
@@ -36,7 +36,7 @@
             <form #planterForm="ngForm">
                 <div class="form-group">
                     <input type="text" id="planterShape" placeholder="Enter Planter Shape"
-                        [(ngModel)]="planter1.planterShape" name="planterShape" required
+                        [(ngModel)]="planter.planterShape" name="planterShape" required
                         pattern="^[A-Za-z]+$"><br>
                     <div *ngIf="planterForm.controls['planterShape'].invalid && (planterForm.controls['planterShape'].dirty || planterForm.controls['planterShape'].touched)">
                         <small class="text-danger" *ngIf="planterForm.controls['planterShape'].hasError('required')"

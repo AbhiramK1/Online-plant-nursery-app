@@ -14,7 +14,9 @@
         <li *ngIf="userType === 'customer'"><a (click)="showCustomerPlanterOptions()">Planters</a></li>
         <li *ngIf="userType === 'customer'"><a (click)="showCustomerOrderOptions()">Orders</a></li>
         <li *ngIf="userType === 'customer'"><a href="#" (click)="showCustomerOptions()">Customers</a></li>
+       
       </ul>
+      <button  class="logout" (click)="logout()" >Logout</button>
     </nav>
   </div>
  

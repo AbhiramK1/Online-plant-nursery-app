@@ -9,9 +9,7 @@ public class Plantvalidator {
 		if (plant == null) {
 			throw new InvalidEntityException("Plant object is null");
 		}
-		if (plant.getPlantId() == null || plant.getPlantId() < 1) {
-			throw new InvalidEntityException("Plant id should be a positive integer");
-		}
+		
 
 		if (plant.getPlantHeight() == null || plant.getPlantHeight() < 1) {
 			throw new InvalidEntityException("Plant height should be a positive integer");

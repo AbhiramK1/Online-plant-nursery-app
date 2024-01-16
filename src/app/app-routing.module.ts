@@ -8,6 +8,7 @@ import { AppOrderComponent } from './app.order-component/app.order.component';
 import { AppCustomerComponentComponent } from './app.customer-component/app.customer-component.component';
 import { AppSeedComponentComponent } from './app.seed-component/app.seed-component.component';
 import { AppSignupComponentComponent } from './app.signup-component/app.signup-component.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [{path:'login', component : AppLoginComponentComponent},
 {path:'signup', component:AppSignupComponentComponent},
@@ -16,7 +17,9 @@ const routes: Routes = [{path:'login', component : AppLoginComponentComponent},
 {path:'planter', component:AppPlanterComponentComponent},
 {path:'seed', component:AppSeedComponentComponent},
 {path:'order', component:AppOrderComponent},
-{path:'customer', component:AppCustomerComponentComponent}];
+{path:'customer', component:AppCustomerComponentComponent},
+{path:'permanent' , component:AppLoginComponentComponent , data: {skipLocationChange: true}}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
