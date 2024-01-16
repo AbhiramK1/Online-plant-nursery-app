@@ -142,25 +142,7 @@ export class AppOrderComponent {
   );
 }
  
-  // deleteOrder(){
-  //   this.selection='delete';
-  //   this.showMenu=false;
-  //   if (this.order.orderId !== undefined) {
-  //   this.orderService.deleteOrder(this.order.orderId).subscribe(
-  //     response => {
-  //       this.responseMessage = `Order with ID ${this.order.orderId} deleted successfully!`;
-  //       this.order = new Order();
-  //     },
-  //     error => {
-  //       console.error( error);
-  //       this.responseMessage = 'Order ID Not Found.';
-  //     }
-  //   );
-  //   }
-  //   else {
-  //     this.responseMsg = 'Please provide a valid Order ID.';
-  // }
-
+  
   cancelOrder(orderId: number) {
     this.orderService.cancelOrder(orderId).subscribe(
       (data) => {
