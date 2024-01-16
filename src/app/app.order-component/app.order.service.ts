@@ -33,10 +33,7 @@ export class OrderService {
     return this.http.get<Order[]>(`${this.apiUrl}/viewAll`);
   }
 
-  // cancelOrder(orderId: any): Observable<Order> {
-  //   return this.http.put<Order>(`${this.apiUrl}/cancel/${orderId}`, '{}');
-  // }
-
+ 
   cancelOrder(orderId: number): Observable<Order> {
     return this.http.put<Order>(`${this.apiUrl}/cancel/${orderId}`, {});
   }
