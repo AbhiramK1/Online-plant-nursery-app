@@ -47,7 +47,7 @@
     <button type="submit" [disabled]="loginForm.invalid ||(email?.invalid && username?.invalid)|| password?.invalid">Login</button>
     <br><br></div>
     <div class="butn">
-      <div  *ngIf="userType?.value === 'customer'"  class="welcome-message"><p>Are you a new user?</p>
+      <div  *ngIf="userType?.value === 'customer'"  class="welcome-message"><p>Are you a new user?</p><br>
     <button type="submit" (click)="navigateToSignup()">Signup</button></div>
   </div>
   </form>
