@@ -50,8 +50,9 @@ public class CustomerController {
 
     @GetMapping("/all")
     public ResponseEntity<List<Customer>> viewAllCustomers() throws InvalidEntityException {
-    	List<Customer> customers = customerService.viewAllCustomers();
-        return ResponseEntity.ok(customers);
+    	List<Customer> customerss = customerService.viewAllCustomers();
+        return ResponseEntity.ok(customerss);
+	
     }
 
     
